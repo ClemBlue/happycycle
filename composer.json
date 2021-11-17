@@ -41,19 +41,19 @@
         "symfony/validator": "5.3.*",
         "symfony/web-link": "5.3.*",
         "symfony/webpack-encore-bundle": "^1.12",
-        "../demo/vendor/symfony/yaml": "5.3.*",
-        "../demo/vendor/twig/extra-bundle": "^2.12|^3.0",
-        "../demo/vendor/twig/twig": "^2.12|^3.0"
+        "symfony/yaml": "5.3.*",
+        "twig/extra-bundle": "^2.12|^3.0",
+        "twig/twig": "^2.12|^3.0"
     },
     "require-dev": {
-        "../demo/vendor/phpunit/phpunit": "^9.5",
-        "../demo/vendor/symfony/browser-kit": "5.3.*",
-        "../demo/vendor/symfony/css-selector": "5.3.*",
-        "../demo/vendor/symfony/debug-bundle": "5.3.*",
-        "../demo/vendor/symfony/maker-bundle": "^1.0",
-        "../demo/vendor/symfony/phpunit-bridge": "^5.3",
-        "../demo/vendor/symfony/stopwatch": "5.3.*",
-        "../demo/vendor/symfony/web-profiler-bundle": "5.3.*"
+        "phpunit/phpunit": "^9.5",
+        "symfony/browser-kit": "5.3.*",
+        "symfony/css-selector": "5.3.*",
+        "symfony/debug-bundle": "5.3.*",
+        "symfony/maker-bundle": "^1.0",
+        "symfony/phpunit-bridge": "^5.3",
+        "symfony/stopwatch": "5.3.*",
+        "symfony/web-profiler-bundle": "5.3.*"
     },
     "config": {
         "optimize-autoloader": true,
