@@ -9,7 +9,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Conteneur;
-use App\Entity\Users;
+use App\Entity\User;
 
 class DashboardController extends AbstractDashboardController
 {
@@ -37,6 +37,6 @@ class DashboardController extends AbstractDashboardController
         // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
         yield MenuItem::linktoRoute('Back to the website', 'fas fa-home', '');
         yield MenuItem::linkToCrud('Conteneur', 'fas fa-map-marker-alt', Conteneur::class);
-        yield MenuItem::linkToCrud('Users', 'fas fa-map-marker-alt', Users::class);
+        yield MenuItem::linkToCrud('Users', 'fas fa-map-marker-alt', User::class);
     }
 }
