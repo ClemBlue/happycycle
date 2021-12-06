@@ -20,16 +20,6 @@ class FormContact
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $nom;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $prenom;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
     private $email;
 
     /**
@@ -38,42 +28,13 @@ class FormContact
     private $message;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="string", length=255)
      */
-    private $createdAt;
-
-    /**
-     * @ORM\Column(type="datetime", nullable=true)
-     */
-    private $updatedAt;
+    private $objet;
 
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getNom(): ?string
-    {
-        return $this->nom;
-    }
-
-    public function setNom(string $nom): self
-    {
-        $this->nom = $nom;
-
-        return $this;
-    }
-
-    public function getPrenom(): ?string
-    {
-        return $this->prenom;
-    }
-
-    public function setPrenom(string $prenom): self
-    {
-        $this->prenom = $prenom;
-
-        return $this;
     }
 
     public function getEmail(): ?string
@@ -100,27 +61,16 @@ class FormContact
         return $this;
     }
 
-    public function getCreatedAt(): ?\DateTimeInterface
+    public function getObjet(): ?string
     {
-        return $this->createdAt;
+        return $this->objet;
     }
 
-    public function setCreatedAt(\DateTimeInterface $createdAt): self
+    public function setObjet(string $objet): self
     {
-        $this->createdAt = $createdAt;
+        $this->objet = $objet;
 
         return $this;
     }
 
-    public function getUpdatedAt(): ?\DateTimeInterface
-    {
-        return $this->updatedAt;
-    }
-
-    public function setUpdatedAt(?\DateTimeInterface $updatedAt): self
-    {
-        $this->updatedAt = $updatedAt;
-
-        return $this;
-    }
 }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Happy Cycle{% endblock %}</title>
+        {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+        {% block stylesheets %}
+            <link href={{ asset('css/main.css') }} rel="stylesheet" />
+        {% endblock %}
+
+        {% block javascripts %}
+            {#{{ encore_entry_script_tags('app') }}#}
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}
+            <h2>Qui sommes nous ?</h2>
+            <div></div>
+            <ul>
+                <li>
+                    <img alt="photo_clem" src="" />
+                    <p>Clément Blin</p>
+                    <p>Développeur Web</p>
+                </li>
+                <li>
+                    <img alt="photo_pauline" src="" />
+                    <p>Pauline Le Breton</p>
+                    <p>UI/UX Designer</p>
+                    <p>Développeuse Front-End</p>
+                </li>
+                <li>
+                    <img alt="photo_max" src="" />
+                    <p>Maxime Carville</p>
+                    <p>Développeur Front-End</p>
+                </li>
+                <li>
+                    <img alt="photo_pape" src="" />
+                    <p>Pape Fall</p>
+                    <p>Développeur Web</p>
+                </li>
+            </ul>
+        {% endblock %}
+    </body>
+</html>

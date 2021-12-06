@@ -2,11 +2,11 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Happy Cycle{% endblock %}</title>
         {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
         {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
+            <link href={{ asset('css/main.css') }} rel="stylesheet" />
         {% endblock %}
 
         {% block javascripts %}
@@ -15,7 +15,101 @@
     </head>
     <body>
         {% block body %}
-            <h1>Vous êtes sur la page d'accueil</h1>
+            {# Header #}
+            <div id="header">
+                <a href="home"><img alt="logo" src="img/Logo.png" /></a>
+                <ul>
+                    <li><a href="qsn">Qui sommes nous ?</a></li>
+                    <li><a href="contact">Nous contacter</a></li>
+                    {% if is_granted('ROLE_USER') %}
+                        <li><a href="logout">Se deconnecter</a></li>
+                        <li><a href="profil">Profile</a></li>
+                    {% else %}
+                        <li><a href="login">Se connecter</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+            {# MAP + Video #}
+            <div>
+                {# MAP #}
+                <div>
+
+                </div>
+                {# VIDEO #}
+                <div>
+                </div>
+            </div>
+            {# Pourquoi Recycler #}
+            <div>
+                <h2>Pourquoi Recycler ?</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. 
+                </p>
+            </div>
+            {# MORE #}
+            <div>
+                <img alt="logo" src=""/>
+                <p>C'est aussi...</p>
+                <ul>
+                    <li>
+                        <img alt="" src=""/>
+                        <p>Des bons gestes..</p>
+                    </li>
+                    <li>
+                        <img alt="" src=""/>
+                        <p>Des mises à jour constantes</p>
+                    </li>
+                    <li>
+                        <img alt="" src=""/>
+                        <p>Une équipe à l'écoute</p>
+                    </li>
+                    <li>
+                        <img alt="" src=""/>
+                        <p>Des récompenses</p>
+                    </li>
+                </ul>
+            </div>
+            {# MERCI #}
+            <div>
+                <p>Merci</p>
+                <div>
+                    <p>Merci ! Nous sommes {{ nbUser }} utilisateurs</p>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div>
+                    <p>Nous référençons {{ nbCont }} point de collectes</p>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div>
+                    <p>Le taux de recyclage en 2021 est de 68%</p>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            {# Footer #}
+            <div id="footer">
+                <div>
+                    <p>Liens du site</p>
+                    <ul>
+                        <li><a href="home">Accueil</a></li>
+                        <li><a href="qsn">Qui sommes nous ?</a></li>
+                        <li><a href="contact">Nous contacter</a></li>
+                        <li><a href="profil">Mon profil</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p>Ressources</p>
+                    <ul>
+                        <li><a href="legal">Mentions legales</a></li>
+                        <li><a href="legal">Conditions utilisateurs</a></li>
+                    </ul>
+                </div>
+                <div></div>
+                <p>Une requête ? <a href="contact">Contactez nous</a></p>
+                <p>© 2021, HappyCycle. | Tous droits réservés.</p>
+            </div>
         {% endblock %}
     </body>
 </html>
