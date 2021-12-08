@@ -13,22 +13,23 @@ use Symfony\Component\Routing\Annotation\Route;
 class FormContactController extends AbstractController
 {
     #[Route('/contact', name: 'form_contact')]
-    public function index(Request $request, EntityManagerInterface $entityManager): Response
+    public function show(Request $request, EntityManagerInterface $entityManagerInterface): Response
     {
         $formContact = new FormContact();
+
         $form = $this->createForm(ContactFormType::class, $formContact);
+
         $form->handleRequest($request);
 
-        if($form->isSubmitted() && $form->isValid()){
+        if($form->isSubmitted() && $form->isValid())
+        {
+            $entityManagerInterface->persist($formContact);
+            $entityManagerInterface->flush();
 
-            $entityManager->persist($formContact);
-            $entityManager->flush();
-
-            return $this->redirectToRoute('main');
         }
 
-        return $this->render('form_contact/index.html.twig', [
-            'contactForm' => $form->createView(),
+        return $this->render('form_contact/index.html.twig',[
+            'contact_form' => $form->createView()
         ]);
     }
 }

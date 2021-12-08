@@ -15,7 +15,9 @@
     </head>
     <body>
         {% block body %}
-        <h2>{{ app.user.email }}</h2>
+            <h2>{{ app.user.email }}</h2>
+            <p> {{ app.user.nom }} {{ app.user.prenom }} </p>
+            <p> Adresse : {{ app.user.adresse }} , {{ app.user.codePostal }} </p>
         {% endblock %}
     </body>
 </html>

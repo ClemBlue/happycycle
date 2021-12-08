@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Conteneur;
 use App\Entity\User;
+use App\Entity\FormContact;
 
 class DashboardController extends AbstractDashboardController
 {
@@ -35,8 +36,9 @@ class DashboardController extends AbstractDashboardController
     {
         //yield MenuItem::linktoDashboard('Dashboard', 'fa fa-home');
         // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
-        yield MenuItem::linktoRoute('Back to the website', 'fas fa-home', 'home');
+        yield MenuItem::linktoRoute('Retour au site web', 'fas fa-home', 'home');
         yield MenuItem::linkToCrud('Conteneur', 'fas fa-map-marker-alt', Conteneur::class);
-        yield MenuItem::linkToCrud('Users', 'fas fa-map-marker-alt', User::class);
+        yield MenuItem::linkToCrud('Utilisateurs', 'fas fa-map-marker-alt', User::class);
+        yield MenuItem::linkToCrud('Messages', 'fas fa-map-marker-alt', FormContact::class);
     }
 }
