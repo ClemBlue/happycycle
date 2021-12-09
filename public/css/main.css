@@ -442,3 +442,39 @@ body{
     color: #000000;
     line-height: 22px;
 }
+
+/***** Qui somme nous ? *****/
+#qsn {
+    margin: 3% 15%;
+}
+#qsn h2{
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+#qsn ul{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+#qsn ul li{
+    width: 25%;
+    text-align: center;
+}
+#qsn ul li p{
+    font-size: 15px;
+    line-height: 24px;
+    text-align: center;
+    color: #000000
+}
+#qsn ul li .name{
+    font-size: 20px;
+    text-align: center;
+    color: #000000;
+    font-weight: bold;
+}
+#qsn ul li img{
+    width: 50%;
+}
