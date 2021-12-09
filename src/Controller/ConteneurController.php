@@ -17,8 +17,33 @@ use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
+
 class ConteneurController extends AbstractController
 {
+
+    /**
+     * @Serializer
+     */
+    private $serializer;
+
+    /**
+     * @var ObjectManager
+     */
+    private $manager;
+
+    public function __construct(EntityManagerInterface $em)
+    {
+        $encoder = new JsonEncoder();
+        $defaultContext = [
+            AbstractNormalizer::CIRCULAR_REFERENCE_HANDLER => function ($object, $format, $context) {
+                return $object->getNom();
+            },
+        ];
+        $normalizer = new ObjectNormalizer(null, null, null, null, null, null, $defaultContext);
+        $this->serializer = new Serializer([$normalizer], [$encoder]);
+        $this->entityManager = $em;
+    }
+
     #[Route('/api/conteneurs/{name}', name: 'conteneurs_ByCity')]
     public function getConteneursByCity(VillesRepository $villesRepository, string $name): JsonResponse
     {
@@ -32,7 +57,12 @@ class ConteneurController extends AbstractController
                 'ville' => $name
             );
         }
-
         return new JsonResponse($conteneurs);
+        $content = $this->serializer->serialize($responseAPI, 'json', ['json_encode_options' => JSON_UNESCAPED_SLASHES]);
+        $response = new Response();
+        $response->setContent($content);
+        $response->setStatusCode(Response::HTTP_OK);
+        $response->headers->set('Content-Type', 'application/json');
+        return $response;
     }
 }

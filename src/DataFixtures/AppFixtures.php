@@ -7,16 +7,12 @@ use App\Entity\Departement;
 use App\Entity\Villes;
 use App\Entity\Conteneur;
 use Doctrine\Persistence\ObjectManager;
-use Faker;
 
 class AppFixtures extends Fixture
 {
     public function load(ObjectManager $manager)
     {
-        $faker = Faker\Factory::create('fr_FR');
-
         $departement = new Departement();
-
         $departement->setName('Haute-Garonne');
         $manager->persist($departement);
         $api_url = 'https://data.toulouse-metropole.fr/api/records/1.0/search/?dataset=points-dapport-volontaire-dechets-et-moyens-techniques&q=&rows=5000&facet=commune&facet=flux';
@@ -29,7 +25,6 @@ class AppFixtures extends Fixture
         foreach ($villes_data as $ville_data) {
             if (isset($ville_data->fields->commune)) {
                 if (in_array($ville_data->fields->commune, $villesNames)) {
-                    # code...
                 } else {
                     array_push($villesNames, $ville_data->fields->commune);
                 }
