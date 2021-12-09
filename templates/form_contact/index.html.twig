@@ -15,8 +15,37 @@
     </head>
     <body>
         {% block body %}
-            <h2>Contactez-nous !</h2>
-            {{ form(contact_form) }}
+            {# Header #}
+            <div id="header">
+                <a class="lien_logo" href="home"><img class="logo_header" alt="logo" src="img/Logo.png" /></a>
+                <ul class="menu">
+                    <li><a href="qsn">Qui sommes nous ?</a></li>
+                    <li><a href="contact">Nous contacter</a></li>
+                    {% if is_granted('ROLE_USER') %}
+                        <li><a href="logout">Se deconnecter</a></li>
+                        <li><a href="profil">Profile</a></li>
+                    {% else %}
+                        <li><a href="login">Se connecter</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+            <div id="contact"> 
+                <h2 class="contact_title">Contactez-nous !</h2>
+                {{ form_start(contact_form) }}
+                    {{ form_row(contact_form.email, {
+                        label: 'Adresse mail',
+                    }) }}
+                    <div class="trait"></div>
+                    {{ form_row(contact_form.objet, {
+                        label: 'Objet'
+                    }) }}
+                    <div class="trait"></div>
+                    {{ form_row(contact_form.message, {
+                        label: 'Votre message'
+                    }) }}
+                    <div class="trait"></div>
+                {{ form_end(contact_form) }}
+            </div>
         {% endblock %}
     </body>
 </html>

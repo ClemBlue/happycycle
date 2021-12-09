@@ -17,8 +17,8 @@
         {% block body %}
             {# Header #}
             <div id="header">
-                <a href="home"><img alt="logo" src="img/Logo.png" /></a>
-                <ul>
+                <a class="lien_logo" href="home"><img class="logo_header" alt="logo" src="img/Logo.png" /></a>
+                <ul class="menu">
                     <li><a href="qsn">Qui sommes nous ?</a></li>
                     <li><a href="contact">Nous contacter</a></li>
                     {% if is_granted('ROLE_USER') %}
