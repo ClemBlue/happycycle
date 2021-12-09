@@ -29,9 +29,24 @@
                     {% endif %}
                 </ul>
             </div>
-            <h2>{{ app.user.email }}</h2>
-            <p> {{ app.user.nom }} {{ app.user.prenom }} </p>
-            <p> Adresse : {{ app.user.adresse }} , {{ app.user.codePostal }} </p>
+            <div id="profil">
+                <p class="welcome">Bienvenu sur votre profile !</p>
+                <div class="info">
+                    <div class="img_profil">
+                        <img alt="image profile" src="img/chara/clement.png" />
+                    </div>
+                    <div class="detail">
+                        <p> Nom / Prénom : <span>{{ app.user.nom }}</span>  / <span>{{ app.user.prenom }}</span> </p>
+                        <p>Adresse mail : <span>{{ app.user.email }}</span></p>
+                        <p> Adresse : <span>{{ app.user.adresse }} , {{ app.user.codePostal }}</span> </p>
+                    </div>
+                </div>
+                {% if is_granted('ROLE_ADMIN') %}
+                <div class="admin_button">
+                    <a class="admin_link" href="admin">Dashboard Admin</a>
+                </div>
+                {% endif %}
+            </div>
         {% endblock %}
     </body>
 </html>
