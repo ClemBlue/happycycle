@@ -9,9 +9,6 @@
             <link href={{ asset('css/main.css') }} rel="stylesheet" />
         {% endblock %}
 
-        {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
-        {% endblock %}
     </head>
     <body>
         {% block body %}
@@ -30,16 +27,7 @@
                 </ul>
             </div>
             <div id="accueil">
-                {# MAP + Video #}
-                <div>
-                    {# MAP #}
-                    <div class="map">
-
-                    </div>
-                    {# VIDEO #}
-                    <div>
-                    </div>
-                </div>
+                <a class="access_map" href="map">Voir la carte</a>
             </div>    
             {# Pourquoi Recycler #}
             <div class="pk_recycler">
@@ -112,5 +100,5 @@
                 <p class="droit">© 2021, HappyCycle. | Tous droits réservés.</p>
             </div>
         {% endblock %}
-    </body>
+        </body>
 </html>

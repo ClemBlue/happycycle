@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Happy Cycle{% endblock %}</title>
+        {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+        {% block stylesheets %}
+            <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
+            <link rel="manifest" href="./manifest.json" />
+            <link href={{ asset('css/main.css') }} rel="stylesheet" />
+        {% endblock %}
+
+    </head>
+    <body>
+        {% block body %}
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+            {# Header #}
+            <div id="header">
+                <a class="lien_logo" href="home"><img class="logo_header" alt="logo" src="../img/Logo.png" /></a>
+                <ul class="menu">
+                    <li><a href="qsn">Qui sommes nous ?</a></li>
+                    <li><a href="contact">Nous contacter</a></li>
+                    {% if is_granted('ROLE_USER') %}
+                        <li><a href="logout">Se deconnecter</a></li>
+                        <li><a href="profil">Profile</a></li>
+                    {% else %}
+                        <li><a href="login">Se connecter</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+            <div id="page_map">
+                {# MAP #}
+                <div id="map">
+                </div>
+            </div>    
+        {% endblock %}
+         <script type="text/javascript">
+            // On initialise la latitude et la longitude de Paris 
+            var lat = 43.60478973388672;
+            var lon = 1.4456943273544312;
+            var macarte = null;
+            var villes = {{ conteneur|json_encode()|raw }};
+            console.log()
+            function initMap() {
+
+                // Créer l'objet "macarte" et l'insèrer dans l'élément HTML qui a l'ID "map"
+                macarte = L.map('map').setView([lat, lon], 11);
+
+                L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+                    attribution: 'données © <a href="//osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="//openstreetmap.fr">OSM France</a>',
+                    minZoom: 1,
+                    maxZoom: 20
+                }).addTo(macarte);
+                for (ville in villes) {
+                    var marker = L.marker([villes[ville].lat, villes[ville].lon]).addTo(macarte);
+                    marker.bindPopup(ville);
+                }
+
+            }
+            window.onload = function(){
+                // Fonction d'initialisation qui s'exécute lorsque le DOM est chargé
+                initMap();
+            };
+        </script>
+
+        <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
+
+        </body>
+</html>
