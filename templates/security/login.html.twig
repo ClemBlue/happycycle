@@ -4,25 +4,26 @@
 
 {% block body %}
     <div id="login">
-        <a href="home"><img class="logo_login" alt="logo" src="img/Logo.png" /></a>
-        <form method="post">
+        <a class="lien_login_logo" href="home"><img class="logo_login" alt="logo" src="img/Logo.png" /></a>
+        <form class="login_form" method="post">
             {% if error %}
                 <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
             {% endif %}
             
-            <label for="inputEmail">Email</label>
-            <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
-            <label for="inputPassword">Password</label>
-            <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+            {# <label for="inputEmail">Email</label> #}
+            <input placeholder="E-mail" type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+            {# <label for="inputPassword">Password</label> #}
+            <input placeholder="Mot de passe" type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
 
             <input type="hidden" name="_csrf_token"
                 value="{{ csrf_token('authenticate') }}"
             >
 
-            <button class="btn btn-lg btn-primary" type="submit">
-                Sign in
+            <button class="login_submit" type="submit">
+                Connexion
             </button>
         </form>
-        <p>Je n'ai pas de compte ? <a href="register">En créer un.</a></p>
+        <p class="bottom_text">Je n'ai pas de compte ? <a class="register_link" href="register">En créer un.</a></p>
     </div>
+    <div id="login_smiley"></div>
 {% endblock %}

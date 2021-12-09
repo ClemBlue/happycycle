@@ -129,9 +129,106 @@ body{
 /***** Login *****/
 #login {
     padding: 0 36%;
+    padding-top: 2%;
     background-color: #205638;
 }
+#login .lien_login_logo{
+    display: block;
+    height: 100%;
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 5%;
+}
 #login a .logo_login{
-    width: 50%;
+    width: 100%;
+}
+#login .login_form{
+    display: flex;
+    flex-direction: column;
+}
+#login .login_form .form-control{
+    margin-top: 3%;
+    background-color: #1A482E;
+    border-radius: 15px;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 20px;
+    line-height: 23px;
+    padding: 2% 5%;
+}
+#login .login_submit{
+    color: #FFFFFF;
+    font-size: 20px;
+    background-color: #5B9073;
+    border-radius: 15px;
+    border: none;
+    line-height: 25px;
+    padding: 10px 16px;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 150px;
+    margin: 10% auto;
+}
+#login .bottom_text{
+    color: #FFFFFF;
     text-align: center;
+    margin: 0 auto;
+}
+#login .register_link{
+    color: #FDE82E;
+}
+#login_smiley{
+    background: url(../img/SVG/Plan\ de\ travail\ 1.svg);
+}
+
+/***** Register *****/
+#register {
+    padding: 0 36%;
+    padding-top: 2%;
+    background-color: #205638;
+}
+#register .lien_register_logo{
+    display: block;
+    height: 100%;
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 5%;
+}
+#register a .logo_register{
+    width: 100%;
+}
+#register form{
+    display: flex;
+    flex-direction: column;
+}
+#register form label{
+    display: none;
+}
+#register form input{
+    margin-top: 3%;
+    background-color: #1A482E;
+    border-radius: 15px;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 20px;
+    line-height: 23px;
+    padding: 2% 5%;
+    width: 100%;
+}
+
+#register .register_submit{
+    color: #FFFFFF;
+    font-size: 20px;
+    background-color: #5B9073;
+    border-radius: 15px;
+    border: none;
+    line-height: 25px;
+    padding: 10px 16px;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 150px;
+    margin: 10% auto;
+}
+#register_smiley{
+    background: url(../img/SVG/Plan\ de\ travail\ 1.svg);
 }
