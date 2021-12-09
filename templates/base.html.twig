@@ -29,86 +29,87 @@
                     {% endif %}
                 </ul>
             </div>
-            {# MAP + Video #}
-            <div>
-                {# MAP #}
+            <div id="accueil">
+                {# MAP + Video #}
                 <div>
+                    {# MAP #}
+                    <div class="map">
 
+                    </div>
+                    {# VIDEO #}
+                    <div>
+                    </div>
                 </div>
-                {# VIDEO #}
-                <div>
-                </div>
-            </div>
+            </div>    
             {# Pourquoi Recycler #}
-            <div>
+            <div class="pk_recycler">
                 <h2>Pourquoi Recycler ?</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. 
+                    Le recyclage participe à la conservation de matières premières précieuses et à la préservation des espaces naturels pour le futur. Le processus de fabrication de matériaux de recyclage requiert nettement moins d'énergie que celui de la production de nouveaux produits à base de matières premières, et ce, même en comparant tous les frais associés, transport inclus, etc.
                 </p>
             </div>
             {# MORE #}
-            <div>
-                <img alt="logo" src=""/>
-                <p>C'est aussi...</p>
+            <div class="more">
+                <img class="logo_more" alt="logo" src="img/Logo.png"/>
+                <p class="text_more">C'est aussi...</p>
                 <ul>
                     <li>
-                        <img alt="" src=""/>
+                        <img alt="Bon gestes" src="img/bongeste.jpg"/>
                         <p>Des bons gestes..</p>
                     </li>
                     <li>
-                        <img alt="" src=""/>
+                        <img alt="Mise à jour" src="img/maj.png"/>
                         <p>Des mises à jour constantes</p>
                     </li>
                     <li>
-                        <img alt="" src=""/>
+                        <img alt="Une équipe" src="img/equipe.jpg"/>
                         <p>Une équipe à l'écoute</p>
                     </li>
                     <li>
-                        <img alt="" src=""/>
+                        <img alt="Des récompenses" src="img/recompense.jpg"/>
                         <p>Des récompenses</p>
                     </li>
                 </ul>
             </div>
             {# MERCI #}
-            <div>
-                <p>Merci</p>
-                <div>
-                    <p>Merci ! Nous sommes {{ nbUser }} utilisateurs</p>
-                    <div></div>
-                    <div></div>
+            <div id="merci">
+                <p class="title">Merci</p>
+                <div class="nb_user">
+                    <p>Merci ! Nous sommes <span>{{ nbUser }}</span> utilisateurs</p>
+                    <img alt="" src="img/Merci.png" />
                 </div>
-                <div>
-                    <p>Nous référençons {{ nbCont }} point de collectes</p>
-                    <div></div>
-                    <div></div>
+                <div class="referencement">
+                    <p>Nous référençons <span>{{ nbCont }}</span> point de collectes</p>
+                    <img alt="" src="img/Nous_referencons.png" />
                 </div>
-                <div>
-                    <p>Le taux de recyclage en 2021 est de 68%</p>
-                    <div></div>
-                    <div></div>
+                <div class="recyclage">
+                    <p>Le taux de recyclage en 2021 est de <span>68%</span></p>
+                    <img alt="" src="img/Le_recyclage.png" />
                 </div>
             </div>
             {# Footer #}
             <div id="footer">
-                <div>
-                    <p>Liens du site</p>
-                    <ul>
-                        <li><a href="home">Accueil</a></li>
-                        <li><a href="qsn">Qui sommes nous ?</a></li>
-                        <li><a href="contact">Nous contacter</a></li>
-                        <li><a href="profil">Mon profil</a></li>
-                    </ul>
+                <div class="liens">
+                    <div class="fast_link">
+                        <p>Liens du site</p>
+                        <ul>
+                            <li><a href="home">Accueil</a></li>
+                            <li><a href="qsn">Qui sommes nous ?</a></li>
+                            <li><a href="contact">Nous contacter</a></li>
+                            <li><a href="profil">Mon profil</a></li>
+                        </ul>
+                    </div>
+                    <div class="rule_link">
+                        <p>Ressources</p>
+                        <ul>
+                            <li><a href="legal">Mentions legales</a></li>
+                            <li><a href="legal">Conditions utilisateurs</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div>
-                    <p>Ressources</p>
-                    <ul>
-                        <li><a href="legal">Mentions legales</a></li>
-                        <li><a href="legal">Conditions utilisateurs</a></li>
-                    </ul>
-                </div>
-                <div></div>
-                <p>Une requête ? <a href="contact">Contactez nous</a></p>
-                <p>© 2021, HappyCycle. | Tous droits réservés.</p>
+                <div class="trait"></div>
+                <p class="link_contact">Une requête ? <a href="contact">Contactez nous</a></p>
+                <p class="droit">© 2021, HappyCycle. | Tous droits réservés.</p>
             </div>
         {% endblock %}
     </body>
