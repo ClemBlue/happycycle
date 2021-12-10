@@ -52,6 +52,8 @@ a {
     text-decoration: none;
 }
 
+
+
 /********* A MODIFIER **********/
 
 body{
@@ -77,6 +79,7 @@ body{
     width: 80%;
     justify-content: flex-end;
     align-items: center;
+    font-family: 'Righteous', cursive;
 }
 #header .menu li{
     margin-left: 5%;
@@ -96,6 +99,7 @@ body{
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 5%;
+    font-family: 'Righteous', cursive;
 }
 #contact .trait{
     width: 100%;
@@ -108,6 +112,7 @@ body{
 #contact form div label{
     font-size: 25px;
     margin-right: 3%;
+    font-family: 'Lato', sans-serif;
 }
 #contact form div:last-of-type{
     margin-left: auto;
@@ -124,6 +129,7 @@ body{
     padding: 9px 16px;
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Righteous', cursive;
 }
 
 /***** Login *****/
@@ -168,11 +174,13 @@ body{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     width: 150px;
     margin: 10% auto;
+    font-family: 'Righteous', cursive;
 }
 #login .bottom_text{
     color: #FFFFFF;
     text-align: center;
     margin: 0 auto;
+    font-family: 'Righteous', cursive;
 }
 #login .register_link{
     color: #FDE82E;
@@ -227,6 +235,7 @@ body{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     width: 150px;
     margin: 10% auto;
+    font-family: 'Righteous', cursive;
 }
 #register_smiley{
     background: url(../img/SVG/Plan\ de\ travail\ 1.svg);
@@ -250,6 +259,7 @@ body{
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin: 10% auto;
+    font-family: 'Righteous', cursive;
 }
 
 .pk_recycler{
@@ -262,11 +272,13 @@ body{
     line-height: 50px;
     margin-bottom: 20px;
     font-weight: bold;
+    font-family: 'Righteous', cursive;
 }
 .pk_recycler p{
     font-size: 20px;
     line-height: 30px;
     color: #060F0A;
+    font-family: 'Lato', sans-serif;
 }
 
 .more{
@@ -287,6 +299,7 @@ body{
     font-size: 25px;
     line-height: 50px;
     margin: 3% auto;
+    font-family: 'Gloria Hallelujah', cursive;
 }
 .more ul{
     display: flex;
@@ -308,6 +321,7 @@ body{
     line-height: 59px;
     color: #FFFFFF;
     margin: 0 auto;
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
 #merci{
@@ -323,6 +337,7 @@ body{
     text-transform: uppercase;
     font-weight: bold;
     margin: 3% auto;
+    font-family: 'Righteous', cursive;
 }
 #merci div{
     margin-bottom: 3%;
@@ -340,6 +355,7 @@ body{
     position: absolute;
     left: 10%;
     top: 25%;
+    font-family: 'Righteous', cursive;
 }
 #merci .nb_user span{
     color: #FDE82E;
@@ -358,6 +374,7 @@ body{
     position: absolute;
     left: 10%;
     top: 25%;
+    font-family: 'Righteous', cursive;
 }
 #merci .referencement span{
     color: #FDE82E;
@@ -378,6 +395,7 @@ body{
     position: absolute;
     left: 10%;
     top: 25%;
+    font-family: 'Righteous', cursive;
 }
 #merci .recyclage span{
     color: #FDE82E;
@@ -400,12 +418,14 @@ body{
     line-height: 45px;
     text-transform: uppercase;
     font-weight: bold;
+    font-family: 'Righteous', cursive;
 }
 #footer .liens .fast_link ul li a, #footer .liens .rule_link ul li a{
     font-weight: 500;
     font-size: 15px;
     line-height: 29px;
     color: rgba(255, 255, 255, 0.8);
+    font-family: 'Lato', sans-serif;
 }
 #footer .trait{
     width: 80%;
@@ -419,6 +439,7 @@ body{
     color: #FFFFFF;
     margin-top: 2%;
     margin-bottom: 2%;
+    font-family: 'Righteous', cursive;
 }
 #footer .link_contact a{
     color: #FDE82E;
@@ -442,17 +463,20 @@ body{
     font-weight: bold;
     color: #000000;
     margin: 5% 0;
+    font-family: 'Righteous', cursive;
 }
 #legal h3{
     font-size: 25px;
     color: #000000;
     line-height: 22px;
     margin: 2% 0;
+    font-family: 'Lato', sans-serif;
 }
 #legal p{
     font-size: 15px;
     color: #000000;
     line-height: 22px;
+    font-family: 'Lato', sans-serif;
 }
 
 /***** Qui somme nous ? *****/
@@ -464,6 +488,7 @@ body{
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
+    font-family: 'Righteous', cursive;
 }
 #qsn ul{
     display: flex;
@@ -479,13 +504,15 @@ body{
     font-size: 15px;
     line-height: 24px;
     text-align: center;
-    color: #000000
+    color: #000000;
+    font-family: 'Lato', sans-serif;
 }
 #qsn ul li .name{
     font-size: 20px;
     text-align: center;
     color: #000000;
     font-weight: bold;
+    font-family: 'Righteous', cursive;
 }
 #qsn ul li img{
     width: 50%;
@@ -501,6 +528,7 @@ body{
     color: #000000;
     font-weight: bold;
     margin-bottom: 5%;
+    font-family: 'Righteous', cursive;
 }
 #profil .info{
     display: flex;
@@ -531,6 +559,7 @@ body{
     font-size: 20px;
     color: #FFFFFF;
     line-height: 30px;
+    font-family: 'Lato', sans-serif;
 }
 #profil .info .detail span{
     color: #FDE82E;
@@ -548,8 +577,8 @@ body{
     padding: 10px 16px;
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    width: 150px;
     margin: 10% auto;
+    font-family: 'Righteous', cursive;
 }
 
 /***** MAP *****/
