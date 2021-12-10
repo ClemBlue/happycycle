@@ -6,6 +6,9 @@
         {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
         {% block stylesheets %}
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Lato:wght@300&family=Righteous&display=swap" rel="stylesheet"> 
             <link href={{ asset('css/main.css') }} rel="stylesheet" />
         {% endblock %}
 
@@ -27,13 +30,29 @@
                 </ul>
             </div>
             <div id="accueil">
+                {# MAP #}
                 <a class="access_map" href="map">Voir la carte</a>
-            </div>    
+                <div class="shapeMap">
+                    <img class="firstShape" alt="firstShape" src="img/Laisse_nous.png" />
+                    <img class="secondShape" alt="secondShape" src="img/Adresse.png" />
+                </div>
+            </div> 
+            <div class="videoDiv">
+                <div class="video">
+                </div>
+                <div class="shapeBackground">
+                    <img class="circleShape" alt"circleShapeLogo" src="img/tete.png" />
+                    <img class="threeShape" alt"threeShape" src="img/Condense_x3.png" />
+                </div>
+            </div>
             {# Pourquoi Recycler #}
             <div class="pk_recycler">
                 <h2>Pourquoi Recycler ?</h2>
                 <p>
-                    Le recyclage participe à la conservation de matières premières précieuses et à la préservation des espaces naturels pour le futur. Le processus de fabrication de matériaux de recyclage requiert nettement moins d'énergie que celui de la production de nouveaux produits à base de matières premières, et ce, même en comparant tous les frais associés, transport inclus, etc.
+                    Chaque jour, en réduisant individuellement nos déchets, en donnant une nouvelle vie à nos objets ou en les recyclant, nous luttons contre le gaspillage et préservons collectivement nos ressources naturelles et l'environnement.
+                </p>
+                <p class="text2">
+                    Faisons-le en nous amusant !
                 </p>
             </div>
             {# MORE #}
@@ -42,19 +61,19 @@
                 <p class="text_more">C'est aussi...</p>
                 <ul>
                     <li>
-                        <img alt="Bon gestes" src="img/bongeste.jpg"/>
+                        <img alt="Bon gestes" src="img/GESTES.png"/>
                         <p>Des bons gestes..</p>
                     </li>
                     <li>
-                        <img alt="Mise à jour" src="img/maj.png"/>
+                        <img alt="Mise à jour" src="img/UPDATE.png"/>
                         <p>Des mises à jour constantes</p>
                     </li>
                     <li>
-                        <img alt="Une équipe" src="img/equipe.jpg"/>
+                        <img alt="Une équipe" src="img/TEAM.png"/>
                         <p>Une équipe à l'écoute</p>
                     </li>
                     <li>
-                        <img alt="Des récompenses" src="img/recompense.jpg"/>
+                        <img alt="Des récompenses" src="img/REWARD.png"/>
                         <p>Des récompenses</p>
                     </li>
                 </ul>

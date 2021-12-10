@@ -59,17 +59,20 @@ a {
 body{
     margin: 0;
     background: url(../img/watercolor_paper_texture_51.jpg);
+    overflow-x: hidden;
 }
 
 /***** Header *****/
 #header {
     background-color: #205638;
-    padding: 1% 6%;
+    height: 8vh;
+    padding: 0px 50px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 #header a .logo_header{
-    width: 100%;
+    width: 50%;
 }
 #header .lien_logo{
     width: 10%;
@@ -79,14 +82,13 @@ body{
     width: 80%;
     justify-content: flex-end;
     align-items: center;
-    font-family: 'Righteous', cursive;
 }
 #header .menu li{
     margin-left: 5%;
 }
 #header .menu li a{
     color: #FFFFFF;
-    font-size: 25px;
+    font-family: 'Righteous', sans-serif;
 }
 
 /***** Page Contact *****/
@@ -243,27 +245,90 @@ body{
 
 /***** Accueil *****/
 #accueil{
-    margin: 5% 0;
-    padding: 0 10%;
     display: flex;
+    justify-content: space-between;
+    margin-left: 100px;
+    height: auto;
 }
 
-#accueil .access_map{
+/*#accueil .access_map{
     color: #FFFFFF;
     font-size: 20px;
-    background-color: #5B9073;
+    background-color: #205638;
     border-radius: 15px;
     border: none;
     line-height: 25px;
-    padding: 10px 16px;
+    padding: 100px 160px;
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin: 10% auto;
+    margin: 5% auto;
     font-family: 'Righteous', cursive;
+}*/
+#accueil .access_map{
+    color: #FFFFFF;
+    font-size: 20px;
+    background-color: #205638;
+    border-radius: 15px;
+    border: none;
+    line-height: 25px;
+    width: 700px;
+    height: 400px;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 70px;
+    font-family: 'Righteous', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shapeMap{
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+}
+.firstShape{
+    height: 100px;
+}
+.secondShape{
+    height: 100px;
+}
+
+.videoDiv{
+    justify-content: space-between;
+    display: flex;
+    margin-left: 100px;
+}
+
+.threeShape{
+    width: 600px;
+    right: 100px;
+    z-index: 3;
+    position: absolute;
+}
+
+.circleShape{
+    width: 800px;
+    height: 800px;
+    z-index: 2;
+    position: absolute;
+    right: -250px;
+    margin-top: -100px;
+}
+
+.video{
+    width: 640px;
+    height: 360px;
+    background-color: #173E29;
+    z-index: 2;
+    position: relative;
+    margin-top: 200px;
 }
 
 .pk_recycler{
-    padding: 2% 10%;
+    margin-top: 100px;
+    padding: 3% 10%;
     background-color: #C1D5CA;
 }
 .pk_recycler h2{
@@ -280,7 +345,9 @@ body{
     color: #060F0A;
     font-family: 'Lato', sans-serif;
 }
-
+.pk_recycler .text2{
+    margin-top: 30px;
+}
 .more{
     background-color: #205638;
     border: 1px solid #000000;
@@ -332,11 +399,12 @@ body{
 }
 #merci .title{
     color: #173E29;
-    font-size: 25px;
+    font-size: 54px;
     line-height: 50px;
     text-transform: uppercase;
     font-weight: bold;
     margin: 3% auto;
+    margin-bottom: 10%;
     font-family: 'Righteous', cursive;
 }
 #merci div{
@@ -407,6 +475,7 @@ body{
 /***** Footer *****/
 #footer{
     background-color: #205638;
+    padding-top: 50px;
 }
 #footer .liens{
     display: flex;
@@ -426,6 +495,7 @@ body{
     line-height: 29px;
     color: rgba(255, 255, 255, 0.8);
     font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
 }
 #footer .trait{
     width: 80%;
